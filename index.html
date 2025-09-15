@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mackillop Catholic College Splash Page</title>
+  <base target="_blank">
+  <style>
+    :root{
+      --tile: 128px;            /* icon box size */
+      --gap: clamp(1rem,2vw,2rem);
+      --maxw: 1100px;           /* grid max width */
+    }
+
+    *{box-sizing:border-box}
+    body{
+      font-family:"Segoe UI", Arial, sans-serif;
+      background:url('https://ictservicedesk.neocities.org/20200427_081636.jpg') no-repeat center center fixed;
+      background-size:cover;
+      color:#fff;
+      line-height:1.5;
+      margin:0;
+      text-align:center;
+      position:relative;
+    }
+
+    body::before, body::after{
+      content:"";
+      position:fixed; left:0; right:0; height:200px; pointer-events:none; z-index:0;
+    }
+    body::before{ top:0;    background:linear-gradient(to bottom, rgba(0,0,0,.6), transparent); }
+    body::after { bottom:0; background:linear-gradient(to top, rgba(0,0,0,.5), transparent); }
+
+    header{ padding:2rem 1rem; position:relative; z-index:1; }
+    header img.logo{ max-width:240px; height:auto; margin-bottom:1rem; }
+    header h1{ font-size:2.2rem; margin:.25rem 0 .5rem; text-shadow:1px 1px 4px rgba(0,0,0,.7); }
+    header p{ font-size:1.1rem; max-width:700px; margin:auto; text-shadow:1px 1px 3px rgba(0,0,0,.7); }
+
+    .grid{
+      display:grid;
+      gap: var(--gap);
+      padding: 3rem 2rem 4rem;
+      max-width: var(--maxw);
+      margin:auto;
+      position:relative; z-index:1;
+      grid-template-columns: repeat(4, 1fr);
+      align-items:start;
+    }
+    @media (max-width: 1199px){ .grid{ grid-template-columns:repeat(3,1fr); } }
+    @media (max-width: 799px) { .grid{ grid-template-columns:repeat(2,1fr); } }
+
+    .link-item{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:flex-start;
+      gap:.75rem;
+      text-decoration:none;
+      color:inherit;
+      padding:.25rem;
+      min-height: calc(var(--tile) + 3.4rem);
+      transition: transform .2s ease;
+    }
+    .link-item:hover{ transform: translateY(-4px); }
+
+    .icon-box{
+      width:var(--tile);
+      height:var(--tile);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .icon-box img{
+      max-width:100%;
+      max-height:100%;
+      object-fit:contain;
+      background:transparent;
+      border:none;
+    }
+
+    .link-item span{
+      display:block;
+      min-height:2.4em;
+      line-height:1.2;
+      font-weight:600;
+      font-size:1rem;
+      text-shadow:1px 1px 2px rgba(0,0,0,.6);
+    }
+
+    footer{
+      text-align:center;
+      padding:1.5rem;
+      font-size:.9rem;
+      position:relative; z-index:1;
+      text-shadow:1px 1px 2px rgba(0,0,0,.7);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img class="logo" src="https://ictservicedesk.neocities.org/MacKillop-Catholic-College_logo_master_RGB_lge.png" alt="Mackillop Catholic College Logo">
+    <h1>Mackillop Catholic College Splash Page</h1>
+    <p>Welcome to Mackillop College Splash page — here you will find links to resources to help with learning and teaching.</p>
+  </header>
+
+  <div class="grid">
+    <!-- IT & Maintenance Ticket Portal FIRST -->
+    <a href="https://mckservices.atlassian.net/servicedesk/customer/portals" class="link-item">
+      <div class="icon-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/10729/10729094.png" alt="IT & Maintenance Ticket Portal">
+      </div>
+      <span>IT & Maintenance Ticket Portal</span>
+    </a>
+
+    <a href="https://mail.google.com" class="link-item">
+      <div class="icon-box">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail">
+      </div>
+      <span>Gmail</span>
+    </a>
+
+    <a href="https://sites.google.com/mackillop.tas.edu.au/staff-handbook/learning-and-teaching/reporting" class="link-item">
+      <div class="icon-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/2965/2965358.png" alt="Reporting Resources">
+      </div>
+      <span>Reporting Resources</span>
+    </a>
+
+    <a href="https://www.canva.com/" class="link-item">
+      <div class="icon-box">
+        <img src="https://public.canva.site/logo/media/dfb96cc174513093cd6ed61489ccb750.svg" alt="Canva">
+      </div>
+      <span>Canva</span>
+    </a>
+
+    <a href="https://sites.google.com/mackillop.tas.edu.au/staff-handbook/staff-forms?authuser=0" class="link-item">
+      <div class="icon-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/318/318477.png" alt="Staff Forms">
+      </div>
+      <span>Staff Forms</span>
+    </a>
+
+    <a href="https://calendar.google.com/calendar/u/0/embed?height=600&wkst=1&bgcolor=%233F51B5&ctz=Australia/Hobart&title=College+Calendar&src=c3RhZmZjYWxlbmRhckBtYWNraWxsb3AudGFzLmVkdS5hdQ&color=%23AD1457&pli=1" class="link-item">
+      <div class="icon-box">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Calendar_icon_%282020%29.svg" alt="College Calendar">
+      </div>
+      <span>College Calendar</span>
+    </a>
+
+    <a href="https://mackillop.concordinfiniti.com/login" class="link-item">
+      <div class="icon-box">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeUZC3BKEXNWbF1LqFUEWaYYLjsprumLjmMA&s" alt="Library Resources">
+      </div>
+      <span>Library Resources</span>
+    </a>
+
+    <a href="https://sites.google.com/catholic.tas.edu.au/professionallearninghub/home" class="link-item">
+      <div class="icon-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135675.png" alt="Professional Learning Hub">
+      </div>
+      <span>Professional Learning Hub</span>
+    </a>
+
+    <a href="https://mccollege.complispaceprimary.com.au/login" class="link-item">
+      <div class="icon-box">
+        <img src="https://www.complispace.com.au/hubfs/Ideagen%20Squares.svg" alt="Complispace">
+      </div>
+      <span>Complispace</span>
+    </a>
+
+    <a href="https://auth.clickviewapp.com/login?returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dbdeb8b2bf33b40179833%26response_type%3Dcode%26scope%3Doffline_access%2520profile%2520openid%2520customer%2520read%2520write%2520cvmaster%2520upload%2520objects.write%26redirect_uri%3Dhttps%253A%252F%252Fonline.clickview.com.au%252Fauth%252Fcallback%26state%3DEwAAAB%252BLCAAAAAAABACrVgpKTcksSk0uCS3KUbJS0leqBQBq1uuwEwAAAA%253D%253D%26response_mode%3Dform_post" class="link-item">
+      <div class="icon-box">
+        <img src="https://play-lh.googleusercontent.com/d4PpM3guc-TI9S3t2VRqT3SMCveq9elcwNjVYvYhTJz5I0NhoaRKOd-9Zx0xH5AdWWNZ" alt="Clickview">
+      </div>
+      <span>Clickview</span>
+    </a>
+
+    <a href="https://www.mcbschools.com/Login" class="link-item">
+      <div class="icon-box">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDXJv0NevTU7_lC3ubUMJGmILDdoP5wC2aDw&s" alt="Consent 2 Go">
+      </div>
+      <span>Consent 2 Go</span>
+    </a>
+
+    <a href="https://www.jacplus.com.au/login" class="link-item">
+      <div class="icon-box">
+        <img src="https://yt3.googleusercontent.com/zvMgZQqM94U_atGKMUIaxjvE8zN47v48zeCOiwp4sXib_IiauspuOua9QwgnUQ2zGhrjgaZUtg=s900-c-k-c0x00ffffff-no-rj" alt="Online Textbooks">
+      </div>
+      <span>Online Textbooks</span>
+    </a>
+
+    <a href="https://sobs.com.au/" class="link-item">
+      <div class="icon-box">
+        <img src="https://sobs.com.au/images/sobs-logo.png" alt="Room Bookings">
+      </div>
+      <span>Room Bookings</span>
+    </a>
+  </div>
+
+  <footer>© Mackillop Catholic College</footer>
+</body>
+</html>
